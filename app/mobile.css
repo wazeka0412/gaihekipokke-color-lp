@@ -1,0 +1,69 @@
+/* 広告流入を想定した、片手操作しやすいモバイル最適化 */
+@media (max-width: 760px) {
+  html { -webkit-text-size-adjust: 100%; }
+  body { min-width: 320px; overflow-x: hidden; }
+  main > header { position: sticky; top: 0; z-index: 40; }
+
+  button, input, select, textarea { min-height: 44px; }
+  a { -webkit-tap-highlight-color: transparent; }
+
+  .top { height: 64px; padding: 0 12px; }
+  .top .logo { min-width: 0; }
+  .top .logo img { width: min(39vw, 150px); }
+  .top > div { margin-left: auto; }
+  .miniCta { min-height: 42px; padding: 9px 11px; border-radius: 9px; font-size: 11px; }
+
+  .hero { position: relative; display: block; min-height: 570px; overflow: hidden; background: #d5f4f1; }
+  .heroArt { position: absolute; inset: 0; z-index: 0; min-height: 0; background: transparent; }
+  .heroArt > img { object-position: 72% center; opacity: .78; }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(242, 255, 255, .98) 0%, rgba(242, 255, 255, .88) 48%, rgba(225, 247, 243, .42) 100%); }
+  .heroText { position: relative; z-index: 2; min-height: 570px; padding: 40px 20px 35px; }
+  .heroText h1 { font-size: clamp(34px, 10vw, 42px); line-height: 1.28; }
+  .heroText > p:not(.tag, .area) { font-size: 14px; line-height: 1.85; }
+  .heroText .cta { width: 100%; min-height: 51px; padding: 14px 16px; border-radius: 10px; }
+  .badges { gap: 7px; }
+  .badges span { min-height: 28px; display: inline-flex; align-items: center; }
+  .heroArt::after { z-index: 0; }
+  .paper, .stamp { display: none; }
+
+  .strip { padding: 15px 20px; line-height: 1.55; }
+  .strip a { width: 100%; min-height: 36px; display: flex; align-items: center; }
+
+  .section { padding: 58px 18px; }
+  .heading h2 { font-size: clamp(27px, 8vw, 35px); line-height: 1.34; }
+  .heading > span { font-size: 13px; line-height: 1.8; }
+  .doubtGrid { grid-template-columns: 1fr; gap: 10px; }
+  .doubtGrid article { min-height: 94px; display: flex; align-items: center; }
+  .doubtGrid p { font-size: 13px; }
+  .checkGrid { gap: 10px; }
+  .checkGrid article { min-height: 154px; padding: 15px 12px; }
+  .checkGrid h3 { font-size: 15px; }
+  .formula { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding: 5px 0 12px; scrollbar-width: thin; }
+  .formula span, .formula strong { white-space: nowrap; }
+  .result, .reason { gap: 26px; }
+  .result aside { padding: 12px; }
+
+  .works > div:last-of-type { display: flex; align-items: center; justify-content: center; min-height: 175px; height: auto; }
+  .reason ul { grid-template-columns: 1fr; gap: 7px; }
+  .flow > div:last-child { max-width: 100%; }
+  .flow article { min-height: 82px; }
+  .faq > div:last-child { border-radius: 15px; }
+  .faq button { min-height: 58px; padding: 14px 0; line-height: 1.55; }
+
+  .contact { padding: 60px 18px 80px; }
+  .contact nav { gap: 10px; }
+  .contact nav a { min-height: 52px; align-items: center; padding: 12px; font-size: 13px; }
+  .contact form { padding: 19px 16px; border-radius: 16px; }
+  .contact input, .contact textarea { padding: 11px; font-size: 16px; }
+  .contact textarea { min-height: 105px; }
+  .contact form .cta { min-height: 50px; }
+
+  footer { padding: 28px 18px 34px; }
+  footer .logo img { width: 145px; }
+}
+
+@media (max-width: 380px) {
+  .top .logo img { width: 124px; }
+  .miniCta { padding: 8px; font-size: 10px; }
+  .heroText h1 { font-size: 33px; }
+}

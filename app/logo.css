@@ -1,0 +1,10 @@
+/* 正式ロゴは、ファーストビューで迷わず読めるサイズを確保する */
+.top .logo { height: 76px; }
+.top .logo img { display: block; width: clamp(155px, 15vw, 215px); height: auto; }
+footer .logo img { display: block; width: 170px; height: auto; }
+
+@media (max-width: 800px) {
+  .top .logo { height: 64px; }
+  .top .logo img { width: min(43vw, 185px); }
+  footer .logo img { width: 150px; }
+}

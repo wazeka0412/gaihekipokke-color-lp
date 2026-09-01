@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
+
+/* 外壁ぽっけらしい、丸みと陽だまり感を足すテーマ */
+:root {
+  --pocket-font: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
+
+/* 見出し・本文・ボタン・フォーム・疑似要素まで同じ丸文字で統一する */
+*,
+*::before,
+*::after {
+  font-family: var(--pocket-font) !important;
+}
+
+h1, h2, h3, .logo, .button, .miniCta, .checkNo {
+  font-weight: 900;
+}
+
+.top {
+  box-shadow: 0 3px 0 #ffdf85, 0 8px 22px rgba(98, 147, 142, .08);
+}
+
+.logoImage {
+  background: #fffdf8;
+  border-radius: 14px;
+  padding: 5px 9px;
+}
+
+/* ヘッダーの黄色い区切り線をロゴ下まで一本につなげる */
+.top .logoImage {
+  background: transparent;
+  border-radius: 0;
+}
+
+.heroArt::before {
+  content: "✦";
+  color: #ffc94f;
+  font-size: 34px;
+  position: absolute;
+  top: -21px;
+  right: 10%;
+  transform: rotate(12deg);
+}
+
+.doubts,
+.price,
+.people {
+  background-image: radial-gradient(rgba(255, 201, 79, .28) 1.25px, transparent 1.25px);
+  background-size: 18px 18px;
+}
+
+.doubtGrid article,
+.checkGrid article,
+.reasonGrid article,
+.flow li,
+.faqItem,
+.contactForm {
+  box-shadow: 0 9px 0 rgba(98, 169, 162, .12), 0 15px 28px rgba(49, 81, 96, .08);
+}
+
+.doubtGrid article:nth-child(2n),
+.checkGrid article:nth-child(3n) {
+  background-color: #fff6df;
+}
+
+.doubtGrid article:hover,
+.checkGrid article:hover,
+.reasonGrid article:hover {
+  transform: translateY(-5px) rotate(-.4deg);
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 12px 0 rgba(239, 131, 80, .16), 0 20px 30px rgba(49, 81, 96, .1);
+}
+
+.button,
+.miniCta {
+  box-shadow: 0 5px 0 rgba(187, 91, 47, .24);
+}
+
+footer .logoImage {
+  display: inline-flex;
+}
+
+@media (max-width: 800px) {
+  .heroArt::before { right: 2px; }
+  .logoImage { padding: 3px 6px; }
+}
